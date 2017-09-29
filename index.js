@@ -42,9 +42,6 @@ function increaseRankBy(n) {
           expect(parseInt(children[i].innerHTML)).toEqual(start - i + 3)
         }
 */
-  for (let i=0; i < list.length; i++) {
-    list[i].innerHTML = parseInt(list[i].innerHTML) + n;
-  }
   return null;
   /*
 
