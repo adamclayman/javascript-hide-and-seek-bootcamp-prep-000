@@ -10,12 +10,12 @@ function nestedTarget() {
   const targetSelection = selection.querySelector('.target');
   return targetSelection;
 }
-function increaseRankBy() {
+function increaseRankBy(n) {
   // increases the ranks in all of the .ranked-lists by n
   const list = document.querySelectorAll('.ranked-list ul li');
 
   for (let i=0; i < list.length; i++) {
-    list.innerHTML++;
+    list.innerHTML += n;
   }
   return null;
   /*
