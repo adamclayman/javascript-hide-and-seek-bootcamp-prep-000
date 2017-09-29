@@ -23,7 +23,6 @@ function increaseRankBy(n) {
   }
   for (i = 0; i < secondListChildren.length; i++) {
     secondListChildren[i] = parseInt(secondListChildren[i]) + n;
-
   }
   /*
         const rankedLists = document.querySelectorAll('.ranked-list')
