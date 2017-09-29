@@ -18,10 +18,10 @@ function increaseRankBy(n) {
   let firstListChildren = firstList.children;
   let secondListChildren = secondList.children;
 
-  for (i = 0; i < firstListChildren.length; i++) {
+  for (let i = 0; i < firstListChildren.length; i++) {
     firstListChildren[i].innerHTML = parseInt(firstListChildren[i].innerHTML) + n;
   }
-  for (i = 0; i < secondListChildren.length; i++) {
+  for (let i = 0; i < secondListChildren.length; i++) {
     secondListChildren[i].innerHTML = parseInt(secondListChildren[i].innerHTML) + n;
   }
   /*
