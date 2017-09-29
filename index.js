@@ -14,7 +14,7 @@ function increaseRankBy() {
   // increases the ranks in all of the .ranked-lists by n
   const list = document.querySelectorAll('.ranked-list ul li');
 
-  for (i=0; i < list.length; i++) {
+  for (let i=0; i < list.length; i++) {
     list.innerHTML++;
   }
   return null;
