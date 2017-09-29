@@ -12,8 +12,25 @@ function nestedTarget() {
 }
 function increaseRankBy() {
   // increases the ranks in all of the .ranked-lists by n
-  lists = document.querySelectorAll('.ranked-list');
-  
+  const lists = document.querySelectorAll('.ranked-list');
+
+  let current = lists;
+  let next = [];
+
+  while (current) {
+    if (parseInt(current.innerHTML) >= 0) {
+      current.innerHTML++;
+    }
+    if (Array.isArray(current)) {
+      for (let i = 0; i < current.length; i++) {
+        next.push(current[i]);
+      }
+    }
+    current = next.shift();
+  }
+
+  return lists;
+
 }
 function deepestChild() {
   // pulls out the most deeply nested child from div#grand-node
