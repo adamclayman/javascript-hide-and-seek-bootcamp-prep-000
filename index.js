@@ -16,6 +16,7 @@ function increaseRankBy() {
 
   let current = lists;
   let next = [];
+  console.log(lists);
 
   /*
   <ul class="ranked-list">
