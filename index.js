@@ -19,10 +19,10 @@ function increaseRankBy(n) {
   let secondListChildren = secondList.children;
 
   for (i = 0; i < firstListChildren.length; i++) {
-    firstListChildren[i] = parseInt(firstListChildren[i]) + n;
+    firstListChildren[i].innerHTML = parseInt(firstListChildren[i].innerHTML) + n;
   }
   for (i = 0; i < secondListChildren.length; i++) {
-    secondListChildren[i] = parseInt(secondListChildren[i]) + n;
+    secondListChildren[i].innerHTML = parseInt(secondListChildren[i].innerHTML) + n;
   }
   /*
         const rankedLists = document.querySelectorAll('.ranked-list')
