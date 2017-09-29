@@ -12,8 +12,37 @@ function nestedTarget() {
 }
 function increaseRankBy(n) {
   // increases the ranks in all of the .ranked-lists by n
-  const list = document.querySelectorAll('.ranked-list ul li');
+  const lists = document.querySelectorAll('.ranked-list');
+  const firstList = lists[0];
+  const secondList = lists[1];
+  let firstListChildren = firstList.children;
+  let secondListChildren = secondList.children;
 
+  for (i = 0; i < firstListChildren.length; i++) {
+    firstListChildren[i] = parseInt(firstListChildren[i]) + n;
+  }
+  for (i = 0; i < secondListChildren.length; i++) {
+    secondListChildren[i] = parseInt(secondListChildren[i]) + n;
+
+  }
+  /*
+        const rankedLists = document.querySelectorAll('.ranked-list')
+        const firstList = rankedLists[0]
+        const secondList = rankedLists[1]
+
+        let children = firstList.children
+        let start = 1
+        for (let i = 0, l = children.length; i < l; i++) {
+          expect(parseInt(children[i].innerHTML)).toEqual(start + i + 3)
+        }
+
+        children = secondList.children
+        start = 12
+
+        for (let i = 0, l = children.length; i < l; i++) {
+          expect(parseInt(children[i].innerHTML)).toEqual(start - i + 3)
+        }
+*/
   for (let i=0; i < list.length; i++) {
     list[i].innerHTML = parseInt(list[i].innerHTML) + n;
   }
