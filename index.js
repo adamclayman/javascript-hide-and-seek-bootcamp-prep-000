@@ -56,4 +56,3 @@ function deepestChild() {
   const deepest = grandNode.querySelector('div div div div div');
   return deepest;
 }
-increaseRankBy();
